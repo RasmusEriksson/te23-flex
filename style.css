@@ -9,9 +9,19 @@ body {
   line-height: 1.5;
 }
 
+.containerRegion{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5rem;
+}
 .container {
   width: min(100% - 3rem, var(--container-max, 60ch));
   margin-inline: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
 }
 
 .region {
@@ -20,7 +30,40 @@ body {
 }
 
 .card {
+  width: min(50% - 3rem, var(--container-max, 20ch));
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
   background-color: rgba(0, 0, 0, 0.1);
+
+  padding: 1rem;
+}
+
+.card--image {
+}
+
+.imageText {
+  display: flex;
+  flex-direction: row;
+}
+
+.imageText > * {
+  margin: 1rem;
+}
+
+.imageText img {
+  width: 35%;
+}
+
+.imageText p {
+  flex-grow: 1;
+}
+
+.card h2 {
+  width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
